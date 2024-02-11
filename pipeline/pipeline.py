@@ -22,13 +22,6 @@ class PipeLine:
         self._component = [] if components is None else components
         self._disable = set() if disable is None else disable
 
-    def _root_caller(self, data: Union[Data, List[Data]]) -> Data:
-        for name, component in self._component:
-            if name in self._disable:
-                continue
-            data_ = component(data)
-        return data_
-
     def __call__(self, data: Union[Data, List[Data]]) -> Data:
         list_of_callables = [
             component

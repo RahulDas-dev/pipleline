@@ -1,6 +1,6 @@
 import logging
 
-from joblib import Parallel, delayed, parallel_config
+# from joblib import Parallel, delayed, parallel_config
 
 from pipeline import Data, PipeLine
 
